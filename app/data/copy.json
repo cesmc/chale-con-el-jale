@@ -1,0 +1,28 @@
+{
+  "navbarItems": ["INICIO", "CONÓCENOS", "HOSTING", "CONTACTO"],
+  "about": {
+    "description": "Chale con el Jale es un espacio para hablar neto del trabajo. Invitamos a personas de distintos oficios, profesiones y proyectos para que cuenten lo bueno, lo malo y lo que nadie te advierte del mundo laboral."
+  },
+  "socialLinks": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/people/Chale-con-el-Jale/61578596319382/#"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@ChaleconelJale"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/chaleconeljale"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://open.spotify.com/show/4fSHEEL8Kwvs4SA8HulQOS?si=8mzZJYMQSvuru9pOgkuwQw&nd=1&dlsi=43c82f89ed9a4ae3"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://www.youtube.com/@ChaleconelJale"
+    }
+  ]
+}
