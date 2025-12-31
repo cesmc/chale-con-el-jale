@@ -5,3 +5,15 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "North Boys";
+  src: url("/fonts/north-boys.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

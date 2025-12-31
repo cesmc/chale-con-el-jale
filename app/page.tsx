@@ -1,13 +1,12 @@
 import Image from "next/image";
 import HeroContainer from "./components/layout/HeroContainer";
+import Navbar from "./components/ui/Navbar";
 
 export default function Home() {
   return (
-    <main className="bg-white text-secondary flex items-center justify-center w-full">
+    <main className="bg-primary text-secondary flex items-center justify-center w-full font-north">
       <HeroContainer>
-        <h1 className="text-4xl font-bold text-accent">
-          Chale con el Jale
-        </h1>
+        <Navbar />
       </HeroContainer>
     </main>
   );

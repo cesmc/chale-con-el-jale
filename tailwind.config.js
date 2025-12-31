@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        north: ['"North Boys"', 'sans-serif'],
+      },
       colors: {
         primary: "#EEA33B",
         secondary: "#1B212F",

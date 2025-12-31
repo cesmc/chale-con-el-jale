@@ -6,7 +6,7 @@ interface Props {
 
 export default function HeroContainer({ children }: Props) {
   return (
-    <section className="w-full bg-primary">
+    <section className="w-full">
       <div
         className="
           mx-auto
@@ -15,7 +15,6 @@ export default function HeroContainer({ children }: Props) {
           bg-[url('/images/hero-bg.png')]
           bg-no-repeat
           bg-top
-          bg-contain
         "
       >
         {children}
