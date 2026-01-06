@@ -1,31 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { IoMenu } from "react-icons/io5";
 import copyData from "../../data/copy.json";
 
 export default function Navbar() {
   const [active, setActive] = useState(copyData.navbarItems[0]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  return (
-    <nav className="w-full">
-      <div className="mx-auto max-w-7xl px-6 mt-8">
-        {/* ===== MOBILE HEADER ===== */}
-        <div className="flex items-center justify-between md:hidden">
-          <span className="text-white text-2xl font-bold">LOGO</span>
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
 
-          <button
+  return (
+    <nav className="w-full flex items-center justify-end md:justify-center">
+      <div className="max-w-7xl p-10 pb-0 md:pb-10">
+        {/* MOBILE HEADER */}
+        <div className="flex md:hidden">
+        <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white text-3xl"
             aria-label="Menu"
           >
-            ☰
+            <IoMenu className="text-secondary text-5xl" />
           </button>
         </div>
 
-        {/* ===== MOBILE MENU ===== */}
+        {/* MOBILE MENU */}
         {isOpen && (
-          <ul className="mt-4 flex flex-col gap-3 rounded-2xl bg-secondary p-4 md:hidden">
+          <ul className="fixed top-0 left-0 right-0 z-1 flex flex-col gap-2 rounded-2xl bg-secondary p-4 md:hidden m-10">
             {copyData.navbarItems.map((item) => {
               const isActive = active === item;
 
@@ -52,7 +58,7 @@ export default function Navbar() {
           </ul>
         )}
 
-        {/* ===== DESKTOP MENU ===== */}
+        {/* DESKTOP MENU */}
         <div className="hidden md:flex justify-center">
           <ul className="flex items-center gap-4 lg:gap-20 rounded-full bg-secondary px-2 py-2">
             {copyData.navbarItems.map((item) => {
