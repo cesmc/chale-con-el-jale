@@ -7,21 +7,20 @@ import SocialIcons from "../ui/SocialIcons";
 
 export default function About() {
   return (
-    <section className="w-full pb-20 flex flex-col items-center justify-center gap-8 px-20">
+    <section className="w-full flex flex-col items-center justify-center gap-8 p-10 md:p-20">
       {/* Image */}
-      <div className="w-full md:w-1/2 flex justify-center mb-4">
+      <div className="mb-4">
         <Image
           src={aboutImg}
           alt="About"
-          width={400}
-          height={400}
-          className="rounded-xl"
+          width={550}
+          className="rounded-xl w-auto h-auto"
         />
       </div>
 
       {/* Description */}
       <div className="w-full md:w-1/2 text-center">
-        <h2 className="text-secondary text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-secondary text-3xl md:text-4xl font-bold pb-10">
           {copyData.about.description}
         </h2>
       </div>
