@@ -4,7 +4,6 @@ import Image from "next/image";
 import hostTitle from "../../../public/images/host-title.png";
 import hostImg from "../../../public/images/host.png";
 import copyData from "../../data/copy.json";
-import SocialIcons from "../ui/SocialIcons";
 
 export default function Host() {
   return (
@@ -22,12 +21,12 @@ export default function Host() {
         <Image
           src={hostImg}
           alt="About"
-          width={350}
-          className="w-auto h-auto"
+          width={250}
+          className="w-auto h-auto md:w-1/3"
         />
 
         {/* Description */}
-        <div className="w-full md:w-1/2 md:text-start text-center">
+        <div className="w-full md:w-2/3 md:text-start text-center">
           <h2 className="text-secondary text-4xl md:text-5xl font-bold md:p-0">
             {copyData.host.name}
           </h2>

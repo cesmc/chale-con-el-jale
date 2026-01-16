@@ -22,11 +22,23 @@
     },
     {
       "name": "TikTok",
-      "url": "https://www.youtube.com/@ChaleconelJale"
+      "url": "https://www.tiktok.com/@jcvannrosas1"
     }
   ],
   "host": {
     "name": "Julio César Rosas",
     "description": "Chale con el Jale es un espacio para hablar neto del trabajo. Invitamos a personas de distintos oficios, profesiones y proyectos para que cuenten lo bueno, lo malo y lo que nadie te advierte del mundo laboral."
+  },
+  "contact": {
+    "goToTop": "Volver arriba",
+    "followChannel": "Sigue el canal"
+  },
+  "WhatsAppGroup": {
+    "name": "WhatsAppGroup",
+    "url": "https://whatsapp.com/channel/0029VbCB1QNHFxOyUtghgQ30"
+  },
+  "footer": {
+    "description": "Todos los derechos reservados.",
+    "label": "© 2026 CHALE CON EL JALE."
   }
 }

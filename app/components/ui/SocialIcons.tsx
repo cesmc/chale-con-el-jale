@@ -11,9 +11,18 @@ const iconMap: Record<string, any> = {
   Instagram: FaInstagram
 };
 
-export default function SocialIcons() {
+const colorClasses: Record<string, string> = {
+  white: "text-white",
+  primary: "text-primary",
+  secondary: "text-secondary",
+};
+interface SocialIconsProps {
+  color?: string
+}
+
+export default function SocialIcons({ color = 'secondary' }: SocialIconsProps) {
   return (
-    <div className="flex justify-center items-center gap-8 mt-4">
+    <div className="flex justify-center items-center gap-8 mt-4 mb-4">
       {copyData.socialLinks.map((social) => {
         const Icon = iconMap[social.name];
         return (
@@ -23,7 +32,7 @@ export default function SocialIcons() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon className="w-12 h-12 text-secondary hover:text-tertiary transition" />
+            <Icon className={`w-8 h-8 md:w-12 md:h-12 ${colorClasses[color]} hover:text-tertiary transition`} />
           </a>
         );
       })}
