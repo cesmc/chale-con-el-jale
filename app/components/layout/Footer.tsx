@@ -4,7 +4,7 @@ import copyData from "../../data/copy.json";
 
 export default function Footer() {
   return (
-  <footer className="w-full bg-secondary text-white p-10 flex flex-center items-center flex-col md:flex-row">
+  <footer className="max-w-5xl w-full bg-secondary text-white p-10 flex flex-center items-center flex-col md:flex-row">
     <Image
           src={logoMini}
           alt="logo-mini"

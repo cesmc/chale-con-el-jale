@@ -15,7 +15,8 @@ export default function Contact() {
         flex
         justify-center
         items-center
-        flex-col      
+        flex-col
+        max-w-5xl    
     "
     >
       <SocialIcons color="white" />

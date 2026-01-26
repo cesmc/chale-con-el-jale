@@ -14,6 +14,8 @@ export default function HeroContainer({ children }: Props) {
         bg-no-repeat
         bg-center
         bg-cover
+        bg-white
+        max-w-5xl
       "
     >
       {children}
