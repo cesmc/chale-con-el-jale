@@ -7,14 +7,14 @@ import SocialIcons from "../ui/SocialIcons";
 
 export default function About() {
   return (
-    <section className="w-full flex flex-col items-center justify-center gap-8 pb-32 px-10 md:px-20">
+    <section id="about" className="w-full flex flex-col items-center justify-center gap-8 pb-32 pt-10 px-10 md:px-20 md:pt-20">
       {/* Image */}
       <div className="mb-4">
         <Image
           src={aboutImg}
           alt="About"
-          width={550}
-          className="rounded-xl w-auto h-auto"
+          width={400}
+          className="rounded-xl h-auto"
         />
       </div>
 

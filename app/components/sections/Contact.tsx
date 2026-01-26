@@ -4,6 +4,7 @@ import copyData from "../../data/copy.json";
 export default function Contact() {
   return (
     <section
+      id="contact"
       className="
         w-screen
         min-h-screen
@@ -21,7 +22,7 @@ export default function Contact() {
     >
       <SocialIcons color="white" />
       <a
-        href="#top"
+        href="#home"
         className="text-white text-3xl hover:text-tertiary transition"
       >
         {copyData.contact.goToTop}

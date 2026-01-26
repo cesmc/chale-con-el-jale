@@ -11,6 +11,7 @@ import Footer from "./components/layout/Footer";
 export default function Home() {
   return (
     <main
+      id="home"
       className="text-secondary flex flex-col items-center justify-center w-full font-north 
         bg-[url('/images/contact-bg.png')]
         bg-no-repeat

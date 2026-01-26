@@ -1,15 +1,52 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import copyData from "../../data/copy.json";
 
+const sectionMap: Record<string, string> = {
+  INICIO: "home",
+  CONÓCENOS: "about",
+  HOSTING: "host",
+  CONTACTO: "contact",
+};
+
 export default function Navbar() {
+  const menuRef = useRef<HTMLUListElement | null>(null);
   const [active, setActive] = useState(copyData.navbarItems[0]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const handleNavigate = (item: string) => {
+    const sectionId = sectionMap[item];
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setActive(item);
+      setIsOpen(false);
+    }
+  };
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, [isOpen]);
 
   return (
@@ -17,7 +54,7 @@ export default function Navbar() {
       <div className="max-w-7xl p-10 pb-0 md:pb-10">
         {/* MOBILE HEADER */}
         <div className="flex md:hidden">
-        <button
+          <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menu"
           >
@@ -27,23 +64,19 @@ export default function Navbar() {
 
         {/* MOBILE MENU */}
         {isOpen && (
-          <ul className="fixed top-0 left-0 right-0 z-1 flex flex-col gap-2 rounded-2xl bg-secondary p-4 md:hidden m-10">
+          <ul ref={menuRef} className="fixed top-0 left-0 right-0 z-1 flex flex-col gap-2 rounded-2xl bg-secondary p-4 md:hidden m-10">
             {copyData.navbarItems.map((item) => {
               const isActive = active === item;
 
               return (
                 <li
                   key={item}
-                  onClick={() => {
-                    setActive(item);
-                    setIsOpen(false);
-                  }}
+                  onClick={() => handleNavigate(item)}
                   className={`
                     cursor-pointer rounded-full px-6 py-3 text-lg font-medium transition
-                    ${
-                      isActive
-                        ? "bg-white text-secondary"
-                        : "text-white hover:bg-white/10"
+                    ${isActive
+                      ? "bg-white text-secondary"
+                      : "text-white hover:bg-white/10"
                     }
                   `}
                 >
@@ -63,13 +96,12 @@ export default function Navbar() {
               return (
                 <li
                   key={item}
-                  onClick={() => setActive(item)}
+                  onClick={() => handleNavigate(item)}
                   className={`
                     cursor-pointer rounded-full px-10 py-2 text-2xl font-medium transition
-                    ${
-                      isActive
-                        ? "bg-white text-secondary"
-                        : "text-white hover:bg-white/10"
+                    ${isActive
+                      ? "bg-white text-secondary"
+                      : "text-white hover:bg-white/10"
                     }
                   `}
                 >

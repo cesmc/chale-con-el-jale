@@ -7,7 +7,7 @@ import copyData from "../../data/copy.json";
 
 export default function Host() {
   return (
-    <section className="w-full max-w-5xl bg-white flex flex-col items-center gap-8 px-10 pb-10 md:px-20 md:pb-20">
+    <section id="host" className="w-full max-w-5xl bg-white flex flex-col items-center gap-8 p-10 md:p-20">
       {/* Title */}
       <Image
         src={hostTitle}
