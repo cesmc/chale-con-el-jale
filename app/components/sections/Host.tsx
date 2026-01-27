@@ -1,5 +1,6 @@
 "use client";
 
+import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import hostTitle from "../../../public/images/host-title.png";
 import hostImg from "../../../public/images/host.png";
@@ -27,15 +28,24 @@ export default function Host() {
 
         {/* Description */}
         <div className="w-full md:w-2/3 md:text-start text-center">
-          <h2 className="text-secondary text-4xl md:text-5xl font-bold md:p-0">
+          <h2 className="text-secondary text-4xl md:text-5xl md:p-0">
             {copyData.host.name}
           </h2>
-          <br/>
-          <h2 className="text-secondary text-3xl md:text-4xl font-bold pb-10 md:p-0">
+          <br />
+          <h2 className="text-secondary text-3xl md:text-4xl">
             {copyData.host.description}
           </h2>
         </div>
       </div>
+
+      <a
+        href={copyData.host.whatsAppGroup.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 text-secondary text-3xl md:text-4xl hover:text-tertiary transition"
+      >
+        {copyData.host.whatsAppGroup.label} <FaWhatsapp className="w-8 h-8 md:w-12 md:h-12 color-secondary hover:text-tertiary transition" />
+      </a>
     </section>
   );
 }

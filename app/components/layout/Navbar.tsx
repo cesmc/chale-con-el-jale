@@ -15,6 +15,7 @@ export default function Navbar() {
   const menuRef = useRef<HTMLUListElement | null>(null);
   const [active, setActive] = useState(copyData.navbarItems[0]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isSticky, setIsSticky] = useState(false);
 
   const handleNavigate = (item: string) => {
     const sectionId = sectionMap[item];
@@ -49,11 +50,21 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 80); // ajusta el número
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="w-full flex items-center justify-end md:justify-center">
-      <div className="max-w-7xl p-10 pb-0 md:pb-10">
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full flex items-center justify-end md:justify-center">
+      <div className={`max-w-7xl transition-all duration-300
+        ${isSticky ? "p-2" : "p-10 pb-0 md:pb-10"}`}>
         {/* MOBILE HEADER */}
-        <div className="flex md:hidden">
+        <div className="flex md:hidden bg-secondary/20 rounded-xl p-2 shadow-md">
           <button
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menu"

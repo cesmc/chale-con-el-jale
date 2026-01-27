@@ -1,7 +1,7 @@
 {
   "navbarItems": ["INICIO", "CONÓCENOS", "HOSTING", "CONTACTO"],
   "about": {
-    "description": "Chale con el Jale es un espacio para hablar neto del trabajo. Invitamos a personas de distintos oficios, profesiones y proyectos para que cuenten lo bueno, lo malo y lo que nadie te advierte del mundo laboral."
+    "description": "Chale con el Jale es un espacio donde hablamos sin filtro del mundo laboral. Aquí invitamos a personas de distintos oficios, profesiones y proyectos para que cuenten la neta: lo bueno, lo malo y eso que nadie te advierte antes de entrarle a un trabajo. Si trabajas, estás buscando chamba o apenas estás pensando en tu futuro... este espacio también es para ti."
   },
   "socialLinks": [
     {
@@ -27,15 +27,18 @@
   ],
   "host": {
     "name": "Julio César Rosas",
-    "description": "Chale con el Jale es un espacio para hablar neto del trabajo. Invitamos a personas de distintos oficios, profesiones y proyectos para que cuenten lo bueno, lo malo y lo que nadie te advierte del mundo laboral."
+    "description": "Creador y host de Chale con el Jale, un podcast dedicado a hablar de frente sobre el mundo laboral. Su enfoque se basa en conversaciones honestas con personas de distintos sectores, explorando tanto los retos como las realidades que existen detrás de cada trabajo.",
+    "whatsAppGroup": {
+      "label": "Únete a nuestro canal",
+      "url": "https://whatsapp.com/channel/0029VbCB1QNHFxOyUtghgQ30"
+    }
   },
   "contact": {
     "goToTop": "Volver arriba",
-    "followChannel": "Sigue el canal"
-  },
-  "WhatsAppGroup": {
-    "name": "WhatsAppGroup",
-    "url": "https://whatsapp.com/channel/0029VbCB1QNHFxOyUtghgQ30"
+    "whatsApp": {
+      "label": "Contáctanos",
+      "url": "https://wa.me/522215648016"
+    }
   },
   "footer": {
     "description": "Todos los derechos reservados.",

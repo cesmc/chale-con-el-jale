@@ -20,7 +20,7 @@ export default function About() {
 
       {/* Description */}
       <div className="w-full md:w-1/2 text-center">
-        <h2 className="text-secondary text-3xl md:text-4xl font-bold">
+        <h2 className="text-secondary text-3xl md:text-4xl">
           {copyData.about.description}
         </h2>
       </div>
